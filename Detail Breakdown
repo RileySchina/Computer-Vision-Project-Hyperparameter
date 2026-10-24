@@ -1,0 +1,61 @@
+IAT360 Computer Vision Projection
+Group 7: Haoyu Zhan, Leon Su, Mackenzie Scholz, Riley Schina
+Cyclist hand signal Identification
+Signal/gesture recognition for autonomous driving
+
+
+Signals include the following
+
+Right Turn
+
+Alternative Right Turn
+
+Left Turn
+
+Slowing Down
+
+Stopped
+
+
+
+
+
+
+Explain Idea
+The main idea for this project is to amend the original YOLO real-time object detection systems with focus on Biker hand signal detection for autonomous driving systems. The trained network will go beyond simple object identification and attempt to recognize the cyclists’ intention. The result would be a more ethical autonomous driving system that provides a safer road condition for both driver and cyclist. 
+
+
+What type of computer vision problem is this?
+
+The Binary Object classification, tracking (continuous motion), localization and instance segmentation
+
+Binary Object classification/tracking to detect the cyclists in motion as in complicated real world traffic scenarios, there could be multiple cyclists heading different directions in various states(static/in motion). 
+
+Localization and Instance segmentation enable more detailed understanding of the circumstances. For instance, localization can help to detect the number of cyclists and use this later to determine their direction of travel, distance from the driver, and intention from their hand gesture. 
+
+This will be supervised learning with all the images labelled. The first stage will be to identify cyclists from the images and the second stage is to detect their turn signallings with their hand gestures. 
+
+What type of data will you need? How are you going to access or collect this data?
+
+We will need images of various ages, genders, ethnic groups of cyclists traveling in different times, terrains, weathers, traffic conditions and costumes in both images and videos.
+
+Labels/Categories
+Right Turn, Alternative Right Turn, Left Turn, Slowing Down, Stopped
+
+Data Source
+https://universe.roboflow.com/methods-of-research-l3ap3/cycling-hand-signals-detection/dataset/3 
+
+This is a collection of 7000+ images concerning cycling hand gestures. Transformations such as duplicating and inverting have also been done to increase the size of the dataset to 30000+ images. The image set is free to download from roboverse, and includes a YOLO specific version for download.
+
+What will be the task distributions?
+Data collection, data labelling, model fine tuning, report 
+
+
+Each Person needs to do:
+Creating new data, Hyperparameter tuning
+
+Extra
+Pose estimation training.
+
+
+Costumes, weather, terrain, camera angles and other factors heavily impact the recognition of the cyclist figure. In some cases, it could even pose challenges to humans. Ideally, this should have been broken down to a few smaller tasks. For example, maybe an expert model that specializes in identifying cyclists at night, and another that trained only on extreme camera angles, etc. Treating them as multi LLM Forest and using different LLM models as individual trees in a Random Forest style. But with my limited knowledge on machine learning, I am not sure how to implement this. Another solution toward this problem is to capture rapid body gestures (such as arm extensions for turns or stopping), translate those physical signals into data packages and immediately broadcast them directly to surrounding vehicles. 
