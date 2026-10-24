@@ -1,77 +1,76 @@
-IAT360 Computer Vision Projection
+# IAT 360: Computer Vision Project Proposal
 
-Group 7: Haoyu Zhan, Leon Su, Mackenzie Scholz, Riley Schina
-Project Idea: Cyclist hand signal Identification
-Signal/gesture recognition for autonomous driving
- 
+**Group 7:** Haoyu Zhan, Leon Su, Mackenzie Scholz, Riley Schina
 
-Explaining the idea
+## Project Idea
 
-The main problem we are hoping to solve is poor understanding of cyclist intentions for drivers and driver assistant programs, such as autonomous driving. Accidents between cyclists and vehicles are quite common, so by creating a system to help identify cyclist intent through hand signals and help track the rough location of cyclists will help reduce those accidents. The model could be applied to or integrated into road recognition systems similar to the Tesla ADAS (Advanced Driver Assistant System).
+**Cyclist Hand Signal Identification: Signal and Gesture Recognition for Autonomous Driving**
 
- 
+## Explaining the Idea
 
-What type of computer vision problem?
+The main problem we hope to address is that drivers and driver-assistance systems, including autonomous-driving systems, may have difficulty understanding cyclists’ intentions. Collisions between cyclists and vehicles are a road-safety concern. A system that recognizes cyclists’ hand signals and tracks their approximate locations could help vehicles anticipate cyclists’ actions and potentially reduce the risk of accidents.
 
-This problem will mostly be a binary object classification problem, using supervised learning with labelled data to determine the presence of cyclists and any hand gestures they are using to help determine their intent.
+The model could potentially be integrated into or used alongside road-perception systems similar in purpose to Tesla’s Advanced Driver Assistance Systems (ADAS). This project is a prototype for cyclist detection and hand-signal recognition; it would not, by itself, establish that the system is safe for real-world driving.
 
+## What Type of Computer Vision Problem Is This?
 
+The project primarily involves **object detection and supervised classification**. Using labelled data, the model will identify cyclists and classify the hand signals they display to help infer their likely intentions.
 
+The work may also involve:
 
-Data: Uses and Access
+- **Localization:** Identifying the approximate position of each cyclist in an image.
+- **Object tracking (if video is used):** Following cyclists across video frames.
+- **Gesture classification:** Classifying a cyclist’s visible signal into one of the dataset’s labelled categories.
 
- 
+Although the original proposal describes the task as binary object classification, the listed dataset contains multiple labels. The overall task is therefore better described as object detection with multi-class classification, depending on the model configuration and annotation format.
 
-Data Source
+## Data: Uses and Access
 
-https://universe.roboflow.com/methods-of-research-l3ap3/cycling-hand-signals-detection/dataset/3Links to an external site. 
+### Data Source
 
-We will be using image data from a Roboflow project containing 7000+ images, plus potentially applying transformations to the images to increase our dataset size if necessary. Additionally we will be adding roughly 30+ images each to increase our dataset. We have already downloaded an untransformed dataset, and a heavily transformed dataset from Roboflow.
+[Roboflow Universe: Cycling Hand Signals Detection — Dataset Version 3](https://universe.roboflow.com/methods-of-research-l3ap3/cycling-hand-signals-detection/dataset/3)
 
- 
+We will use image data from a Roboflow project containing more than 7,000 images. If necessary, we may apply image transformations to increase the amount and variety of training data. Each group member will also contribute approximately 30 or more labelled images.
 
-Labels/Categories:
+We have already downloaded both an untransformed dataset and a heavily transformed version from Roboflow. We will review the annotations and class distribution before training. We should also avoid placing duplicated or near-duplicated images in different training, validation, and test splits, as this could make the evaluation results appear better than they are.
 
-Cyclist, Giveway, Left Turn, Overtaking, Right Turn, Road Hazard, Slow Down, Stop
+### Labels and Categories
 
- 
+The dataset uses the following labels:
 
-These labels come from the dataset, and roughly follow the hand signals used in New Zealand for cyclists on the road.
+- Cyclist
+- Giveway
+- Left Turn
+- Overtaking
+- Right Turn
+- Road Hazard
+- Slow Down
+- Stop
 
+These labels come from the dataset and roughly follow cyclist hand signals used on roads in New Zealand. We will verify the dataset’s annotation definitions and spelling before training.
 
+## Role Distribution and Timeline
 
+### Weeks 1–2: Data Collection and Preprocessing
 
-Role Distribution 
+- **Riley and Leon:** Coordinate data collection and preprocessing, including cleaning up the dataset.
+- **All group members:** Contribute at least 30 labelled images each.
 
- 
+### Weeks 2–3: Fine-Tuning
 
-Week 1-2
+- **Leon:** Set up the base YOLO model.
+- **All group members:** Tune their own hyperparameters and compare results.
 
-Data collection and preprocessing: clean up data
+### Week 3: Evaluation
 
-Riley
-Leon
-Everyone will also contribute 30+ labeled images
-Week 2-3
+- **Mackenzie and Haoyu:** Evaluate the model’s results.
 
-Fine-tuning: optimize our YOLO model
+### Week 3: Report
 
-Leon (base model setup)
-Everyone will also tune their own hyperparameter 
-Week 3
+- **Mackenzie and Riley:** Summarize the results and findings.
 
-Evaluation: evaluate model’s result
+### Weeks 3–4: Presentation and Final Report
 
-Mackenzie
-Haoyu
-Week 3
+- **Haoyu:** Handle video editing.
 
-Report: sum up our results
-
-Mackenzie
-Riley
-Week 3-4
-
-Presentation and Final Report
-
-Video editing: Haoyu
+The group will coordinate to complete the presentation and final report.
