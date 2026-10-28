@@ -6,9 +6,6 @@ How to read the results of an object detection model.
 
 "Box" means these scores are for the bounding boxes. They rely on one idea first.
 
-### IoU (intersection over union)
-
-IoU measures how much a predicted box overlaps the true box, from 0 (no overlap) to 1 (identical). A prediction counts as correct only if it has the right class **and** an IoU above a threshold, usually 0.5.
 
 ### P (precision)
 
