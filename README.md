@@ -48,29 +48,3 @@ The dataset uses the following labels:
 - Stop
 
 These labels come from the dataset and roughly follow cyclist hand signals used on roads in New Zealand. We will verify the dataset’s annotation definitions and spelling before training.
-
-## Role Distribution and Timeline
-
-### Weeks 1–2: Data Collection and Preprocessing
-
-- **Riley and Leon:** Coordinate data collection and preprocessing, including cleaning up the dataset.
-- **All group members:** Contribute at least 30 labelled images each.
-
-### Weeks 2–3: Fine-Tuning
-
-- **Leon:** Set up the base YOLO model.
-- **All group members:** Tune their own hyperparameters and compare results.
-
-### Week 3: Evaluation
-
-- **Mackenzie and Haoyu:** Evaluate the model’s results.
-
-### Week 3: Report
-
-- **Mackenzie and Riley:** Summarize the results and findings.
-
-### Weeks 3–4: Presentation and Final Report
-
-- **Haoyu:** Handle video editing.
-
-The group will coordinate to complete the presentation and final report.
