@@ -38,13 +38,13 @@ Lr0_0.001 was leading since the first epoch; score rising indicates that trainin
 
 ## Confusion Matrix Normalized
 
-![Normalized confusion matrix](https://raw.githubusercontent.com/zhengyangsu/Computer-Vision-Project-Overview/main/Documentation/confusion_matrix_normalized.png)
+![Normalized confusion matrix](https://raw.githubusercontent.com/zhengyangsu/Computer-Vision-Project-Overview/main/report/confusion_matrix_normalized.png)
 
 Normalized Confusion Matrix on the validation set showed 5 different categories have high prediction success with the exception of background (no cyclist) with high misses.
 
 ## Training Curves from results.png lr0_0.0001
 
-![Training curves, lr0_0.0001](https://raw.githubusercontent.com/zhengyangsu/Computer-Vision-Project-Overview/main/Documentation/results.png)
+![Training curves, lr0_0.0001](https://raw.githubusercontent.com/zhengyangsu/Computer-Vision-Project-Overview/main/report/results.png)
 
 Lr0_0.0001 mAP50-95 = 0.492
 
